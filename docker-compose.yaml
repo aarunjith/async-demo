@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - app-network
+  mongodb:
+    image: mongo:latest
+    ports: 
+      - "27017:27017"
+    networks:
+      - app-network
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: 'bridge'

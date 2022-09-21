@@ -1,0 +1,6 @@
+celery
+fastapi
+loguru
+pymongo
+pymongo[srv]
+uvicorn
