@@ -28,4 +28,4 @@ $ curl -X POST http://localhost:8080/process
 $ curl -X POST http://localhost:8080/check_progress/<task_id>
 ```
 # Setting up your tasks
-You can use this pipline to run your custom tasks. You just have to modify the tasks.py and connect it to a fastapi endpoint for trigger
+You can use this pipline to run your custom tasks. You just have to modify the [tasks.py](https://github.com/aarunjith/async-demo/blob/main/tasks.py) and connect it to a fastapi endpoint for trigger
