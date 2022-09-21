@@ -9,3 +9,20 @@
 </tr></table>
 Set up an async pipeline in python using Celery, RabbitMQ and MongoDB. This repo covers the end to end deployment of an async pipeline for your projects using Docker
 
+# Quickstart
+
+1. Clone the repo
+2. Make sure Docker and Docker Compose are installed
+```bash
+$ pip install docker-compose
+```
+3. Start the docker containers
+```bash
+$ docker compose up --build
+```
+4. Check the pipeline using FastAPI endpoints
+```bash
+# To start processing a task
+$ curl -X POST http://localhost:8080/process
+# To check the progress of a task
+$ curl -X POST http://localhost:8080/check_progress/<task_id>
