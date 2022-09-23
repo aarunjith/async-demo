@@ -21,5 +21,4 @@ def start_processing(self):
         result = file.read()
     time.sleep(60)
     logger.info('Done reading a book :)')
-    logger.info()
     return result
